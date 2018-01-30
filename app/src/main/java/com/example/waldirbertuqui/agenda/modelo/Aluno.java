@@ -1,10 +1,12 @@
 package com.example.waldirbertuqui.agenda.modelo;
 
+import java.io.Serializable;
+
 /**
  * Created by waldir.bertuqui on 29/01/2018.
  */
 
-public class Aluno {
+public class Aluno implements Serializable {
     private Long id;
     private String nome;
     private String endereco;
@@ -58,5 +60,10 @@ public class Aluno {
 
     public void setRatingBar(Double ratingBar) {
         this.ratingBar = ratingBar;
+    }
+
+    @Override
+    public String toString() {
+        return getId() + " - " + getNome();
     }
 }
